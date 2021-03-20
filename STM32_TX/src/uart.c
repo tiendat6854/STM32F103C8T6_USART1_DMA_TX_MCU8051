@@ -40,7 +40,7 @@ void uart_dma_Init(void)
 	
 	DMA1_Channel4->CPAR = (uint32_t)(&(USART1->DR));
 	
-	DMA1_Channel4 ->CNDTR = 3;
+	DMA1_Channel4 ->CNDTR = sizeof(u16Buffer);
 	
 	USART1->CR3 |= (3 << 6);
 	
